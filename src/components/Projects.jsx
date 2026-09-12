@@ -1,4 +1,3 @@
-import React from 'react';
 import { ArrowUpRight, Calendar, Star } from 'lucide-react';
 
 export const Projects = ({ projects, onSelectProject }) => {
@@ -29,7 +28,7 @@ export const Projects = ({ projects, onSelectProject }) => {
     <>
       <div className="text-center max-w-xl mx-auto mb-16 space-y-2">
         <h2 className="text-4xl font-extrabold text-text-primary">Featured Projects</h2>
-        <p className="text-text-muted text-base">Architecture. Development. Industrial Automation.</p>
+        <p className="text-text-muted text-base">Agentic AI. Distributed Systems. Cloud Intelligence.</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

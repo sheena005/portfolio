@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Routes, Route, useNavigate, useLocation, useParams } from 'react-router-dom';
 import { data } from '../data.js';
 import { projectDetailsData } from './projectDetailsData.js';
@@ -43,13 +43,6 @@ export default function App() {
 
   const currentView = location.pathname.startsWith('/projects/') ? 'detail' : 'home';
 
-  // Handle fake navigation state passed to Navbar component
-  const handleNavbarSetView = (viewObj) => {
-    if (viewObj.type === 'home') {
-      navigate('/');
-    }
-  };
-
   return (
     <>
       <Navbar
@@ -57,7 +50,6 @@ export default function App() {
         toggleTheme={toggleTheme}
         toggleTerminal={() => setTerminalOpen(!terminalOpen)}
         currentView={currentView}
-        setView={handleNavbarSetView}
         resumeUrl={data.resume}
         githubUrl={data.contact.github}
         linkedinUrl={data.contact.linkedin}
@@ -102,7 +94,7 @@ export default function App() {
                 <div className="max-w-6xl mx-auto px-6 md:px-16 w-full">
                   <Timeline
                     title="Education"
-                    subtitle="My academic history and parameters."
+                    subtitle="Academic milestones, degrees, and institutions."
                     items={data.education}
                   />
                 </div>
@@ -112,7 +104,7 @@ export default function App() {
                 <div className="max-w-6xl mx-auto px-6 md:px-16 w-full">
                   <Timeline
                     title="Experience"
-                    subtitle="My extracurricular design and hardware simulation tasks."
+                    subtitle="Industry internships and engineering contributions."
                     items={data.experience}
                   />
                 </div>
@@ -128,7 +120,7 @@ export default function App() {
 
               <section id="skills" className="py-24 border-t border-border-color bg-bg-tertiary">
                 <div className="max-w-6xl mx-auto px-6 md:px-16 w-full">
-                  <Skills skills={data.skills} />
+                  <Skills skills={data.skills} skillCategories={data.skillCategories} />
                 </div>
               </section>
 
@@ -138,7 +130,7 @@ export default function App() {
                     <div className="space-y-6 text-left">
                       <h2 className="text-5xl font-extrabold tracking-tight leading-none text-text-primary">Let's work together.</h2>
                       <p className="text-lg text-text-secondary">
-                        I'm always open to discussing new projects, automation designs, database engineering pipelines, or smart server configurations.
+                        I'm always open to discussing enterprise AI solutions, distributed systems, machine learning engineering, or software engineering opportunities.
                       </p>
                       <div className="flex flex-col gap-6">
                         <div className="flex items-center gap-5">

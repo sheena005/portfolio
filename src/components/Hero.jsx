@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { ArrowRight, Download } from 'lucide-react';
 
 const GithubIcon = ({ size = 20 }) => (
@@ -13,7 +13,7 @@ const InstagramIcon = ({ size = 20 }) => (
   <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
 );
 
-export const Hero = ({ role, name, about, resumeUrl, githubUrl, linkedinUrl, instagramUrl, data }) => {
+export const Hero = ({ role, name, resumeUrl, githubUrl, linkedinUrl, instagramUrl, data }) => {
   // Resolve social URLs
   const resolvedGithub = githubUrl || data?.contact?.github;
   const resolvedLinkedin = linkedinUrl || data?.contact?.linkedin;
@@ -21,9 +21,6 @@ export const Hero = ({ role, name, about, resumeUrl, githubUrl, linkedinUrl, ins
   const resolvedInstagram = rawInstagram && !rawInstagram.startsWith('http')
     ? `https://instagram.com/${rawInstagram.replace('@', '')}`
     : rawInstagram;
-
-  // Split the name to highlight the second part
-  const nameParts = name.split(" ");
 
   // Terminal state
   const [terminalInputVal, setTerminalInputVal] = useState('');
@@ -53,12 +50,12 @@ export const Hero = ({ role, name, about, resumeUrl, githubUrl, linkedinUrl, ins
     if (!trimmed) return;
 
     const cmd = trimmed.toLowerCase();
-    let response = '';
+    let response;
     const newHistory = [...terminalHistory, { type: 'input', text: trimmed }];
 
     switch (cmd) {
       case 'help':
-        response = `Available commands: \n  • about: Personal bio\n  • experience: Professional journey\n  • education: Academic milestones\n  • projects: Technical projects catalog\n  • skills: My technical stack\n  • contact: Get in touch\n  • clear: Clear the screen`;
+        response = "Available commands: \n  • about: Personal bio\n  • experience: Professional journey\n  • education: Academic milestones\n  • projects: Technical projects catalog\n  • skills: My technical stack\n  • contact: Get in touch\n  • clear: Clear the screen";
         break;
       case 'about':
         response = data.about;
@@ -73,13 +70,14 @@ export const Hero = ({ role, name, about, resumeUrl, githubUrl, linkedinUrl, ins
           `[${edu.period}] ${edu.degree}\n  ↳ ${edu.institution} (${edu.description || ''})`
         ).join('\n\n');
         break;
-      case 'projects':
+      case 'projects': {
         const sortedProj = [...data.projects].sort((a, b) => (b.stars || 0) - (a.stars || 0));
         response = sortedProj.map(p => {
           const rating = p.stars ? ` [Rating: ${p.stars}/5]` : '';
           return `★ ${p.title} (${p.status || 'Completed'})${rating}\n  - Tags: ${p.tags.join(', ')}\n  - ${p.description}`;
         }).join('\n\n');
         break;
+      }
       case 'skills':
         response = `Technical Stack:\n  • ` + data.skills.join('\n  • ');
         break;
@@ -110,10 +108,10 @@ export const Hero = ({ role, name, about, resumeUrl, githubUrl, linkedinUrl, ins
         <span className="text-primary font-mono uppercase tracking-widest text-xs font-semibold block">{role}</span>
         <h1 className="text-6xl font-extrabold tracking-tight leading-none text-text-primary">
           Hello, I'm <br />
-          <span className="text-primary">{nameParts.slice(-2).join(" ")}</span>
+          <span className="text-primary">{name}</span>
         </h1>
         <p className="text-lg text-text-secondary leading-relaxed">
-          Engineer focused on building clean, modular software systems, secure local-first cloud containers, and real-time automation.
+          Engineer specializing in production-ready Agentic AI systems, scalable distributed GPU cloud clusters, and high-performance full-stack architectures.
         </p>
 
         <div className="flex gap-4 flex-wrap items-center">
@@ -170,7 +168,7 @@ export const Hero = ({ role, name, about, resumeUrl, githubUrl, linkedinUrl, ins
               <span className="w-2.5 h-2.5 rounded-full bg-amber-500" />
               <span className="w-2.5 h-2.5 rounded-full bg-emerald-500" />
             </div>
-            <div className="flex-1 text-center text-xs text-text-muted mr-9">ismail@portfolio-server:~</div>
+            <div className="flex-1 text-center text-xs text-text-muted mr-9">sheena@portfolio-server:~</div>
           </div>
 
           <div className="flex-1 p-5 overflow-y-auto text-xs text-text-primary flex flex-col gap-2 text-left" ref={terminalBodyRef}>

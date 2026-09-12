@@ -1,9 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { X, Square, Minus } from 'lucide-react';
+import { useState, useEffect, useRef } from 'react';
 
 export const Terminal = ({ isOpen, onClose, data }) => {
-  if (!isOpen) return null;
-
   const [inputVal, setInputVal] = useState('');
   const [history, setHistory] = useState([
     { type: 'system', text: "Welcome to Terminal Mode." },
@@ -25,17 +22,19 @@ export const Terminal = ({ isOpen, onClose, data }) => {
     }
   }, [history]);
 
+  if (!isOpen) return null;
+
   const handleCommand = (cmdStr) => {
     const trimmed = cmdStr.trim();
     if (!trimmed) return;
 
     const cmd = trimmed.toLowerCase();
-    let response = '';
+    let response;
     const newHistory = [...history, { type: 'input', text: trimmed }];
 
     switch (cmd) {
       case 'help':
-        response = `Available commands: \n  • about: Personal bio\n  • experience: Professional journey\n  • education: Academic milestones\n  • projects: Technical projects catalog\n  • skills: My technical stack\n  • contact: Get in touch\n  • clear: Clear the screen\n  • exit: Close terminal`;
+        response = "Available commands: \n  • about: Personal bio\n  • experience: Professional journey\n  • education: Academic milestones\n  • projects: Technical projects catalog\n  • skills: My technical stack\n  • contact: Get in touch\n  • clear: Clear the screen\n  • exit: Close terminal";
         break;
       case 'about':
         response = data.about;
@@ -50,15 +49,16 @@ export const Terminal = ({ isOpen, onClose, data }) => {
           `[${edu.period}] ${edu.degree}\n  ↳ ${edu.institution} (${edu.description || ''})`
         ).join('\n\n');
         break;
-      case 'projects':
+      case 'projects': {
         const sortedProj = [...data.projects].sort((a, b) => (b.stars || 0) - (a.stars || 0));
         response = sortedProj.map(p => {
           const rating = p.stars ? ` [Rating: ${p.stars}/5]` : '';
           return `★ ${p.title} (${p.status || 'Completed'})${rating}\n  - Tags: ${p.tags.join(', ')}\n  - ${p.description}`;
         }).join('\n\n');
         break;
+      }
       case 'skills':
-        response = `Technical Stack:\n  • ` + data.skills.join('\n  • ');
+        response = "Technical Stack:\n  • " + data.skills.join('\n  • ');
         break;
       case 'contact':
         response = `Email: ${data.contact.email}\nPhone: ${data.contact.phone}\nLocation: ${data.contact.location}\nGitHub: ${data.contact.github}\nLinkedIn: ${data.contact.linkedin}`;
@@ -92,15 +92,15 @@ export const Terminal = ({ isOpen, onClose, data }) => {
   };
 
   return (
-    <div className="fixed inset-0 bg-black/65 backdrop-blur-sm z-[200] flex items-center justify-center p-6" onClick={handleOverlayClick}>
-      <div className="w-full max-w-2xl h-[480px] bg-[#0d1117] border border-[#30363d] rounded-2xl flex flex-col shadow-2xl overflow-hidden font-mono text-left animate-fade-in">
+    <div className="fixed inset-0 bg-black/65 backdrop-blur-sm z-[200] flex items-center justify-center p-6 terminal-overlay" onClick={handleOverlayClick}>
+      <div className="w-full max-w-2xl h-[480px] bg-[#0d1117] border border-[#30363d] rounded-2xl flex flex-col shadow-2xl overflow-hidden font-mono text-left animate-fade-in" onClick={(e) => e.stopPropagation()}>
         <div className="bg-[#161b22] px-5 py-3 flex items-center justify-between border-b border-[#30363d] select-none">
           <div className="flex gap-1.5">
             <span className="w-3 h-3 rounded-full bg-red-500 cursor-pointer" onClick={onClose} />
             <span className="w-3 h-3 rounded-full bg-amber-500" />
             <span className="w-3 h-3 rounded-full bg-emerald-500" />
           </div>
-          <span className="text-xs text-[#8b949e] font-semibold mr-10">ismail@portfolio-shell:~</span>
+          <span className="text-xs text-[#8b949e] font-semibold mr-10">sheena@portfolio-shell:~</span>
           <div style={{ width: '40px' }} />
         </div>
 

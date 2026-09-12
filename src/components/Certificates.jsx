@@ -1,32 +1,32 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight, Award } from 'lucide-react';
 
-export const Certificates = ({ certificates }) => {
-  if (!certificates || certificates.length === 0) return null;
-
+export const Certificates = ({ certificates = [] }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const timeoutRef = useRef(null);
+  const total = certificates ? certificates.length : 0;
 
-  const resetTimeout = () => {
+  useEffect(() => {
+    if (total === 0) return;
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
     }
-  };
-
-  useEffect(() => {
-    resetTimeout();
     timeoutRef.current = setTimeout(
       () =>
         setActiveIndex((prevIndex) =>
-          prevIndex === certificates.length - 1 ? 0 : prevIndex + 1
+          prevIndex === total - 1 ? 0 : prevIndex + 1
         ),
       5000
     );
 
     return () => {
-      resetTimeout();
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
     };
-  }, [activeIndex, certificates.length]);
+  }, [activeIndex, total]);
+
+  if (!certificates || certificates.length === 0) return null;
 
   const handlePrev = () => {
     setActiveIndex((prev) => (prev === 0 ? certificates.length - 1 : prev - 1));

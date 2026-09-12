@@ -1,4 +1,3 @@
-import React from 'react';
 import { resolveAssetPath } from '../utils';
 
 export const About = ({ aboutText, profileImg, projectsCount }) => {
@@ -20,12 +19,12 @@ export const About = ({ aboutText, profileImg, projectsCount }) => {
 
         <div className="grid grid-cols-2 gap-6 mt-4">
           <div className="bg-bg-secondary border border-border-color rounded-2xl p-6 text-center transition-all duration-300 hover:border-primary hover:-translate-y-1 hover:shadow-lg">
-            <span className="text-3xl font-extrabold text-primary font-heading block mb-1">Entry</span>
-            <span className="text-[11px] text-text-muted font-bold uppercase tracking-wider">Talent Ready</span>
+            <span className="text-3xl font-extrabold text-primary font-heading block mb-1">8.52</span>
+            <span className="text-[11px] text-text-muted font-bold uppercase tracking-wider">MIT Anna Univ CGPA</span>
           </div>
           <div className="bg-bg-secondary border border-border-color rounded-2xl p-6 text-center transition-all duration-300 hover:border-primary hover:-translate-y-1 hover:shadow-lg">
             <span className="text-3xl font-extrabold text-primary font-heading block mb-1">{projectsCount}+</span>
-            <span className="text-[11px] text-text-muted font-bold uppercase tracking-wider">Projects Completed</span>
+            <span className="text-[11px] text-text-muted font-bold uppercase tracking-wider">Key Platforms Built</span>
           </div>
         </div>
       </div>

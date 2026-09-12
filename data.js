@@ -1,187 +1,140 @@
 export const data = {
-  name: "A.M. Ismail",
-  role: "System Architect & Engineer",
-  resume: "./assets/resume_ismail.pdf",
+  name: "SHEENA U",
+  role: "AI & Cloud Systems Engineer | Full-Stack Developer",
+  resume: "./assets/resume.pdf",
   gamePath: [
     { "Dino": "./games/dino/dino.html" },
     { "Pacman": "./games/pacman/pacman.html" },
     { "Tetris": "./games/tetris/tetris.html" }
   ],
   images: {
-    profile: "./assets/me.jpeg",
-    hero: "./assets/hero.jpeg"
+    profile: "./assets/profile.svg",
+    hero: "./assets/profile.svg"
   },
   contact: {
-    email: "ismailisims1@gmail.com",
-    phone: "+91 81248 14896",
+    email: "sheenaumar05@gmail.com",
+    phone: "+91 6381004147",
     location: "Chennai, India",
-    github: "https://github.com/Isu-Ismail",
-    linkedin: "https://www.linkedin.com/in/ismail-am",
-    instagram: "https://www.instagram.com/ismail_isims"
+    github: "https://github.com/sheena005",
+    linkedin: "https://www.linkedin.com/in/sheena-u",
+    instagram: ""
   },
-  about: "Engineering student specializing in industrial automation and distributed systems. I bridge mechanical engineering fundamentals with software architecture—designing IoT control systems, deploying multi-node compute infrastructure, and building production-grade automation for real industrial environments. My background gives me a solid grasp of physical machinery, while my focus remains on mapping logical data flows and designing the software systems that run them. Proven track record of delivering reliable systems that run 24/7 in manufacturing and academic settings.",
+  about: "Computer Science & Data Science dual-track engineer studying at Madras Institute of Technology (Anna University) and IIT Madras. I specialize in architecting enterprise Agentic AI platforms, Model Context Protocol (MCP) integrations, high-availability distributed GPU computing infrastructure, and cloud-native systems. Experienced in production LLM pipelines, container orchestration, and full-stack software development with a proven focus on building resilient, scalable, and intelligent applications.",
   education: [
     {
-      degree: "B.E. Production Engineering",
-      institution: "Madras Institute of Technology",
-      period: "Aug 2023 - 2027",
-      description: "CGPA: 7.74/10. Currently in IV Year."
+      degree: "B.E. Computer Science and Engineering",
+      institution: "Madras Institute of Technology (MIT), Anna University",
+      period: "2023 – 2027",
+      description: "Chennai, India • CGPA: 8.52/10.00"
     },
     {
-      degree: "Higher Secondary (HSC)",
-      institution: "L K Higher Secondary School",
-      period: "2022 - 2023",
-      description: "Score: 545/600 (90.8%)"
+      degree: "B.S. Data Science and Applications",
+      institution: "Indian Institute of Technology Madras (IIT Madras)",
+      period: "2023 – Present",
+      description: "Online / Hybrid • CGPA: 7.02/10.00"
     }
   ],
   experience: [
     {
-      role: "Industrial Intern (Production & Operations)",
-      company: "SRI Energy Valves Private Limited",
-      period: "June 2026",
-      description: "Underwent focused observational training in industrial valve assembly and shop-floor inventory operations; studied step-by-step mechanical workflows, defect inspection, and systematic part transport logistics.",
-      certificateLink: "./assets/sri_internship.png"
+      role: "Data Science Intern",
+      company: "Dover Corporation",
+      period: "May 2026 – July 2026",
+      description: "Worked with the Data Analytics team to develop enterprise AI solutions for engineering, marketing, and service operations. Built production-ready LLM applications and contributed to enterprise AI adoption across business workflows with scalable AI deployments, cloud infrastructure, and DevOps practices in Bangalore, India."
     },
     {
-      role: "Chassis Design & Maintenance",
-      company: "MITONAUR Motorsports (Go-Kart Team)",
-      period: "Dec 2024 - 2025",
-      description: "Structured structural simulations and engineering parameters on racing frames designed for the TNKC and KEC championships."
+      role: "Web Development Intern",
+      company: "Novitech",
+      period: "May 2025 – June 2025",
+      description: "Developed responsive full-stack web applications and implemented new features for client projects. Collaborated with developers to integrate backend APIs, optimize UI performance, and resolve production issues."
     }
   ],
   skills: [
-    "MQTT", "Docker", "Docker Swarm", "NGINX", "Pocketbase", "Prometheus", "Grafana", "JupyterHub", "Git", "XAMPP", "GlusterFS", "FireBase", "Python", "FastAPI", "React", "Flutter", "Arduino", "SolidWorks", "Creo", "NX CAD", "CATIA", "Abaqus CAE"
+    "Java", "Python", "C++", "JavaScript",
+    "LangChain", "RAG", "FAISS", "MCP Servers", "Azure OpenAI",
+    "FastAPI", "Spring Boot", "React.js", "Node.js", "Express.js",
+    "Docker", "Kubernetes", "Docker Swarm", "GlusterFS", "Prometheus", "Grafana", "AWS CloudWatch",
+    "PostgreSQL", "MongoDB", "Firebase Firestore",
+    "Git", "GitHub", "JupyterHub", "Portainer", "Postman"
   ],
-  interests: ["3D Printing", "Home Server Administration", "Karting", "Tech Exploration"],
-  certificates: [
+  skillCategories: [
     {
-      title: "RUSA 2.0 AI in Smart BMS",
-      image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      desc: "Hands-on training on AI applications in Smart Battery Management Systems."
+      title: "AI & Machine Learning",
+      icon: "cpu",
+      items: ["LangChain", "Retrieval-Augmented Generation", "FAISS", "MCP Servers", "Azure OpenAI", "LightGBM", "Isolation Forest"]
     },
     {
-      title: "Arduino Bootcamp",
-      image: "https://images.unsplash.com/photo-1553406830-ef2513450d76?auto=format&fit=crop&w=800&q=80",
-      desc: "Comprehensive bootcamp on microcontroller programming and hardware interaction."
+      title: "Cloud & Distributed Systems",
+      icon: "server",
+      items: ["Docker", "Kubernetes", "Docker Swarm", "GlusterFS", "Prometheus", "Grafana", "AWS CloudWatch", "Portainer"]
+    },
+    {
+      title: "Languages & Frameworks",
+      icon: "layers",
+      items: ["Python", "Java", "C++", "JavaScript", "FastAPI", "Spring Boot", "React.js", "Node.js", "Express.js"]
+    },
+    {
+      title: "Databases & Tooling",
+      icon: "database",
+      items: ["PostgreSQL", "MongoDB", "Firebase Firestore", "Git", "GitHub", "JupyterHub", "Postman"]
+    }
+  ],
+  interests: ["Agentic AI", "Distributed Systems", "Cloud Orchestration", "Open Source", "Autonomous Systems"],
+  certificates: [
+    {
+      title: "AI Fundamentals",
+      issuer: "IBM",
+      image: "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=800&q=80",
+      desc: "Authorized credential in AI principles, generative models, neural architectures, and enterprise AI deployment by IBM."
+    },
+    {
+      title: "Cloud Cybersecurity Professional",
+      issuer: "GOOGLE",
+      image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80",
+      desc: "Comprehensive cloud network defense, SIEM tools, zero-trust security postures, and compliance policies by Google."
     },
     {
       title: "Python for Data Science",
+      issuer: "NPTEL",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
-      desc: "Foundational course on Python libraries including Pandas and NumPy by IBM."
+      desc: "Foundational training in scientific Python, vector operations, Pandas data wrangling, and statistical computing."
+    },
+    {
+      title: "Deep Learning",
+      issuer: "NPTEL",
+      image: "https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=800&q=80",
+      desc: "Rigorous coursework covering neural network backpropagation, CNNs, sequence models, and modern deep learning."
     }
   ],
   projects: [
-
     {
-      title: "Sri Energy Industrial Automation",
-      description: "A local-first IoT crane telemetry and real-time control system. Features containerized React/FastAPI services connected to a self-hosted Pocketbase backend and ESP32 nodes via MQTT.",
-      tags: ["ESP32", "MQTT", "FastAPI", "Pocketbase", "React", "NGINX", "Docker", "XAMPP"],
-      link: "https://srienergy.com/",
-      detailsLink: "./project_details/sriautoamtion.html",
+      title: "Enterprise Agentic AI Platform",
+      description: "Production-ready Agentic AI platform leveraging LangChain, multi-repo RAG, FAISS vector search, and Model Context Protocol (MCP) tool calling. Integrated with Azure OpenAI and containerized via Docker and Kubernetes.",
+      tags: ["MCP", "LangChain", "Azure OpenAI", "FAISS", "RAG", "Docker", "Kubernetes"],
+      link: "https://github.com/sheena005",
+      detailsLink: "./project_details/agentic-ai.html",
       status: "Completed",
-      duration: "Oct 2024 – May 2026",
+      duration: "May 2026 – July 2026",
       stars: 5
     },
     {
-      title: "CTSKII (ML-Cloud Computing)",
-      description: "A high-availability server cluster offering GPU cloud environments to students. Built with Docker Swarm, GlusterFS, and a slot-based FastAPI booking platform.",
-      tags: ["Docker Swarm", "GlusterFS", "JupyterHub", "FastAPI", "Prometheus", "Grafana", "NFS"],
-      link: "https://ct.mitindia.edu/ctskii/",
-      detailsLink: "./project_details/ctskii.html",
+      title: "Distributed GPU Cloud Orchestration Platform",
+      description: "High-availability 10-node GPU cluster engineered for machine learning compute. Built with Docker Swarm, GlusterFS distributed storage, FastAPI role-based booking, and Prometheus/Grafana real-time telemetry.",
+      tags: ["Docker Swarm", "GlusterFS", "FastAPI", "JupyterHub", "Prometheus", "Grafana", "Portainer"],
+      link: "https://github.com/sheena005",
+      detailsLink: "./project_details/gpu-orchestration.html",
       status: "Completed",
-      duration: "Oct 2025 – Marhch 2026",
+      duration: "Jan 2026 – Apr 2026",
       stars: 5
     },
     {
-      title: "Middleman: Serverless Sourcing & RFQ Engine",
-      description: "An automated RFQ sourcing engine connecting mail streams to React Flow timelines and a serverless PocketBase backend.",
-      tags: ["React", "PocketBase", "React Flow", "Sourcing Engine", "Serverless", "Webhooks"],
-      link: "https://github.com/Isu-Ismail/middleman",
-      detailsLink: "./project_details/middleman.html",
+      title: "AI-Powered Cloud FinOps Platform",
+      description: "Cloud resource cost optimization engine monitoring live AWS CloudWatch metrics. Employs Isolation Forest for anomalous spending spikes and LightGBM for cost forecasting and capacity recommendations.",
+      tags: ["AWS CloudWatch", "LightGBM", "Isolation Forest", "FastAPI", "Python", "Data Science"],
+      link: "https://github.com/sheena005",
+      detailsLink: "./project_details/cloud-finops.html",
       status: "Completed",
-      duration: "June 2026 - July 2026",
+      duration: "Oct 2025 – Dec 2025",
       stars: 5
-    },
-    {
-      title: "Quran Competition Management System (SQLC)",
-      description: "A web application suite designed to manage Quran competition registrations, venue allocations, dynamic marksheets, and interactive tie-resolution.",
-      tags: ["React", "TypeScript", "PocketBase", "Docker", "Nginx", "Leaderboards"],
-      link: "https://github.com/Isu-Ismail/quran-competition-system",
-      detailsLink: "./project_details/slqc.html",
-      status: "Completed",
-      duration: "June 2026 - June 2026",
-      stars: 5
-    },
-    {
-      title: "CWM (Command Watch Manager)",
-      description: "A complete workspace and shell history manager for developers. Catalog projects, quick-jump to editors, search history banks, switch GitHub accounts, and copy token-condensed codebase contexts.",
-      tags: ["Python", "CLI", "Click", "Rich", "AI Integration", "Workspace Manager", "Developer Tools"],
-      link: "https://isu-ismail.github.io/cwm-docwebsite/index.html",
-      detailsLink: "./project_details/cwm.html",
-      status: "Completed",
-      duration: "Nov 2025 – Dec 2025",
-      stars: 4
-    },
-
-    {
-      title: "Seven5: Attendance Tracking App",
-      description: "An offline-first Flutter application utilizing Google Drive API sync and predictive leave/attendance simulation algorithms.",
-      tags: ["Flutter", "Hive", "Dart", "Google Drive API", "Cloud Run"],
-      link: "https://github.com/Isu-Ismail/ATTENDER_APP",
-      detailsLink: "./project_details/seven5.html",
-      status: "Completed",
-      duration: "Dec 2025 – May 2026",
-      stars: 4
-    },
-    {
-      title: "NeoCGPA: Intelligent GPA/CGPA Calculator & Target Planner",
-      description: "A client-side GPA/CGPA tracker built with Svelte 5. Features instant calculations, in-browser Tesseract.js OCR marksheet scanning, vector PDF export, and target CGPA goal planning.",
-      tags: ["Svelte 5", "Vite", "Tesseract.js", "OCR", "jsPDF", "Firebase", "Neo-Brutalism"],
-      link: "https://codism.in/neocgpa/",
-      detailsLink: "./project_details/cgpa.html",
-      status: "Completed",
-      duration: "Aug 2026 – Sep 2026",
-      stars: 3
-    },
-    {
-      title: "EggShell: Visual Relational Data Pipeline Builder",
-      description: "A local-first, visual database pipeline workspace to stitch and clean spreadsheet data using an in-browser SQLite Web Worker and React Flow canvas.",
-      tags: ["React", "SQLite", "React Flow", "Web Worker", "OPFS", "Data Pipeline", "Client-Side Privacy"],
-      link: "https://codism.in/eggshell/",
-      detailsLink: "./project_details/eggshell.html",
-      status: "Completed",
-      duration: "May 2026",
-      stars: 3
-    },
-
-    {
-      title: "Virtual Lab for Metrology",
-      description: "A web simulator for physical Profile Projector metrology experiments. Combines 12 decoupled microservices routed via NGINX reverse proxy.",
-      tags: ["React", "Docker", "NGINX", "Simulation"],
-      link: "https://ptmit-org.github.io/virtuallab/",
-      detailsLink: "./project_details/virtuallab.html",
-      status: "Completed",
-      duration: "Sep 2025 – Apr 2026",
-      stars: 3
-    },
-    {
-      title: "BillGenie",
-      description: "A containerized donor registry and ledger system for community organizations. Features single/batch entry modes, local caching, and bulk PDF invoicing.",
-      tags: ["React", "FastAPI", "PocketBase", "Docker", "Pydantic", "Excel Import"],
-      link: "https://github.com/Isu-Ismail/BillGenie/",
-      detailsLink: "./project_details/billgenie.html",
-      status: "Completed",
-      duration: "May 2026",
-      stars: 3
-    },
-    {
-      title: "Anna University App",
-      description: "Mobile application frontend contributions for the official e-Governance workspace at Anna University.",
-      tags: ["Flutter", "Dart", "Hive", "Mobile"],
-      link: "https://play.google.com/store/apps/details?id=com.cegov.AUeGov",
-      status: "Completed",
-      duration: "Aug 2025 – Nov 2025",
-      stars: 3
     }
   ]
 };
