@@ -8,8 +8,8 @@ export const data = {
     { "Tetris": "./games/tetris/tetris.html" }
   ],
   images: {
-    profile: "./assets/profile.svg",
-    hero: "./assets/profile.svg"
+    profile: "./assets/sheena.jpg",
+    hero: "./assets/sheena.jpg"
   },
   contact: {
     email: "sheenaumar05@gmail.com",
