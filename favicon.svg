@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+    <defs>
+        <linearGradient id="gradBg" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#12131a"/>
+            <stop offset="100%" stop-color="#090a0f"/>
+        </linearGradient>
+        <linearGradient id="gradGold" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#f3d078"/>
+            <stop offset="50%" stop-color="#d4af37"/>
+            <stop offset="100%" stop-color="#a37b4c"/>
+        </linearGradient>
+    </defs>
+    
+    <!-- Background Card -->
+    <rect width="120" height="120" rx="32" fill="url(#gradBg)"/>
+    
+    <!-- Gold Border Ring -->
+    <rect x="6" y="6" width="108" height="108" rx="26" fill="none" stroke="url(#gradGold)" stroke-width="2.5" opacity="0.85"/>
+    
+    <!-- Monogram "S" -->
+    <path d="M 75 42 C 64 35, 46 38, 46 51 C 46 67, 76 63, 76 78 C 76 91, 56 94, 45 84" 
+          fill="none" 
+          stroke="url(#gradGold)" 
+          stroke-width="9" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+</svg>
