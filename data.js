@@ -49,8 +49,8 @@ export const data = {
     }
   ],
   skills: [
-    "Java", "Python", "C++", "JavaScript",
-    "LangChain", "RAG", "FAISS", "MCP Servers", "Azure OpenAI",
+    "Python", "C++", "Java", "JavaScript",
+    "Streamlit", "pybind11", "Scikit-Learn", "LangChain", "RAG", "FAISS", "MCP Servers", "Azure OpenAI",
     "FastAPI", "Spring Boot", "React.js", "Node.js", "Express.js",
     "Docker", "Kubernetes", "Docker Swarm", "GlusterFS", "Prometheus", "Grafana", "AWS CloudWatch",
     "PostgreSQL", "MongoDB", "Firebase Firestore",
@@ -60,7 +60,7 @@ export const data = {
     {
       title: "AI & Machine Learning",
       icon: "cpu",
-      items: ["LangChain", "Retrieval-Augmented Generation", "FAISS", "MCP Servers", "Azure OpenAI", "LightGBM", "Isolation Forest"]
+      items: ["Scikit-Learn", "LangChain", "Retrieval-Augmented Generation", "FAISS", "MCP Servers", "Azure OpenAI", "LightGBM", "Isolation Forest"]
     },
     {
       title: "Cloud & Distributed Systems",
@@ -70,7 +70,7 @@ export const data = {
     {
       title: "Languages & Frameworks",
       icon: "layers",
-      items: ["Python", "Java", "C++", "JavaScript", "FastAPI", "Spring Boot", "React.js", "Node.js", "Express.js"]
+      items: ["Python", "C++", "Java", "JavaScript", "Streamlit", "pybind11", "FastAPI", "Spring Boot", "React.js"]
     },
     {
       title: "Databases & Tooling",
@@ -107,10 +107,22 @@ export const data = {
   ],
   projects: [
     {
+      title: "OptiTest AI — Optical Simulation & Validation Framework",
+      description: "Autonomous optical transmission link simulator, fault-injection engine, and validation framework with a C++17 physics core, ITU-T G.692 rule harness, dual ML anomaly detection (99.6% accuracy), and Gemini AI root-cause analysis.",
+      tags: ["C++17", "Python", "pybind11", "Streamlit", "Scikit-Learn", "Gemini API", "ITU-T", "Machine Learning"],
+      link: "https://optitest-ai-bkk.streamlit.app/",
+      github: "https://github.com/sheena005/optitest-ai",
+      detailsLink: "./project_details/optitest-ai.html",
+      status: "Completed",
+      duration: "Nov 2026",
+      stars: 5
+    },
+    {
       title: "Enterprise Agentic AI Platform",
       description: "Production-ready Agentic AI platform leveraging LangChain, multi-repo RAG, FAISS vector search, and Model Context Protocol (MCP) tool calling. Integrated with Azure OpenAI and containerized via Docker and Kubernetes.",
       tags: ["MCP", "LangChain", "Azure OpenAI", "FAISS", "RAG", "Docker", "Kubernetes"],
       link: "https://github.com/sheena005",
+      github: "https://github.com/sheena005",
       detailsLink: "./project_details/agentic-ai.html",
       status: "Completed",
       duration: "May 2026 – July 2026",
@@ -121,6 +133,7 @@ export const data = {
       description: "High-availability 10-node GPU cluster engineered for machine learning compute. Built with Docker Swarm, GlusterFS distributed storage, FastAPI role-based booking, and Prometheus/Grafana real-time telemetry.",
       tags: ["Docker Swarm", "GlusterFS", "FastAPI", "JupyterHub", "Prometheus", "Grafana", "Portainer"],
       link: "https://github.com/sheena005",
+      github: "https://github.com/sheena005",
       detailsLink: "./project_details/gpu-orchestration.html",
       status: "Completed",
       duration: "Jan 2026 – Apr 2026",
@@ -131,6 +144,7 @@ export const data = {
       description: "Cloud resource cost optimization engine monitoring live AWS CloudWatch metrics. Employs Isolation Forest for anomalous spending spikes and LightGBM for cost forecasting and capacity recommendations.",
       tags: ["AWS CloudWatch", "LightGBM", "Isolation Forest", "FastAPI", "Python", "Data Science"],
       link: "https://github.com/sheena005",
+      github: "https://github.com/sheena005",
       detailsLink: "./project_details/cloud-finops.html",
       status: "Completed",
       duration: "Oct 2025 – Dec 2025",

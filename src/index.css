@@ -28,7 +28,6 @@
   --animate-fade-in: fadeInUp 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 
   @keyframes glow-pulse {
-
     0%,
     100% {
       opacity: 1;
@@ -39,7 +38,7 @@
     50% {
       opacity: 0.7;
       transform: scale(1.05);
-      filter: drop-shadow(0 0 8px var(--primary));
+      filter: drop-shadow(0 0 10px var(--primary));
     }
   }
 
@@ -62,62 +61,64 @@
   --transition-normal: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
-  /* Light Theme Colors (Default) - Luxury Platinum & Muted Gold */
+  /* Light Theme Colors - Crisp Cyber Slate & Deep Electric Cerulean */
   --bg-primary: #f8fafc;
   --bg-secondary: #ffffff;
   --bg-tertiary: #f1f5f9;
-  --bg-card: rgba(255, 255, 255, 0.75);
+  --bg-card: rgba(255, 255, 255, 0.85);
 
-  --text-primary: #0f172a;
-  --text-secondary: #475569;
+  --text-primary: #0b1329;
+  --text-secondary: #334155;
   --text-muted: #64748b;
 
-  --primary: #c29f68;
-  /* Luxury Muted Gold */
-  --primary-hover: #a37b4c;
-  --primary-rgb: 194, 159, 104;
+  --primary: #0284c7;
+  --primary-hover: #0369a1;
+  --primary-rgb: 2, 132, 199;
 
-  --border-color: #cbd5e1;
-  --border-focus: #c29f68;
+  --border-color: #e2e8f0;
+  --border-focus: #0284c7;
 
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
-  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
+  --shadow-xl: 0 20px 25px -5px rgba(2, 132, 199, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+  --shadow-2xl: 0 25px 50px -12px rgba(2, 132, 199, 0.14);
 
   --glass-blur: 16px;
-  --glass-bg: rgba(255, 255, 255, 0.7);
-  --glass-border: rgba(203, 213, 225, 0.6);
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(226, 232, 240, 0.8);
 }
 
 [data-theme="dark"] {
-  /* Dark Theme Colors - Luxury Obsidian, Graphite & Champagne Gold */
-  --bg-primary: #090a0f;
-  /* Obsidian Black */
-  --bg-secondary: #12131a;
-  /* Graphite Black */
-  --bg-tertiary: #191b24;
-  /* Rich Slate */
-  --bg-card: rgba(18, 19, 26, 0.65);
+  /* Dark Theme Colors - Quantum Void, Cyber Slate & Electric Cyan */
+  --bg-primary: #050811;
+  /* Quantum Deep Void */
+  --bg-secondary: #0a0f1d;
+  /* Cyber Slate Navy */
+  --bg-tertiary: #10172a;
+  /* High-Tech Carbon */
+  --bg-card: rgba(10, 15, 29, 0.72);
 
-  --text-primary: #f8fafc;
-  --text-secondary: #cbd5e1;
-  --text-muted: #8e9bb0;
+  --text-primary: #f1f5f9;
+  /* Arctic White */
+  --text-secondary: #94a3b8;
+  /* Cool Chrome Silver */
+  --text-muted: #64748b;
+  /* Deep Space Slate */
 
-  --primary: #d4af37;
-  /* Brilliant Champagne Gold */
-  --primary-hover: #f3d078;
-  --primary-rgb: 212, 175, 55;
+  --primary: #00f2fe;
+  /* Neon Electric Cyan */
+  --primary-hover: #38bdf8;
+  /* Sky Cyan Glow */
+  --primary-rgb: 0, 242, 254;
 
-  --border-color: #262933;
-  /* Slate/Obsidian Border */
-  --border-focus: #d4af37;
+  --border-color: #162035;
+  /* Subtle Cybernetic Slate Border */
+  --border-focus: #00f2fe;
 
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.45), 0 10px 10px -5px rgba(0, 0, 0, 0.25);
-  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.55);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.65), 0 0 20px rgba(0, 242, 254, 0.09);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.85), 0 0 35px rgba(0, 242, 254, 0.16);
 
-  --glass-bg: rgba(18, 19, 26, 0.65);
-  --glass-border: rgba(38, 41, 51, 0.6);
+  --glass-bg: rgba(10, 15, 29, 0.72);
+  --glass-border: rgba(22, 32, 53, 0.8);
 }
-
 
 html {
   scroll-behavior: smooth;
@@ -132,9 +133,26 @@ body {
   transition: background-color var(--transition-normal), color var(--transition-normal);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  position: relative;
 }
 
-
+/* Futuristic Ambient Cyber Grid & Glow Mesh */
+[data-theme="dark"] body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image:
+    radial-gradient(circle at 12% 18%, rgba(0, 242, 254, 0.06) 0%, transparent 38%),
+    radial-gradient(circle at 88% 75%, rgba(99, 102, 241, 0.05) 0%, transparent 42%),
+    linear-gradient(rgba(255, 255, 255, 0.012) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.012) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 56px 56px, 56px 56px;
+  pointer-events: none;
+  z-index: -1;
+}
 
 /* Scrollbar Customization */
 ::-webkit-scrollbar {
@@ -152,5 +170,5 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--text-muted);
+  background: var(--primary);
 }

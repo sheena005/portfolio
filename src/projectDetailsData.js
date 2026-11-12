@@ -161,5 +161,74 @@ export const projectDetailsData = {
         ]
       }
     ]
+  },
+  "optitest-ai": {
+    subtitle: "Autonomous Optical Link Simulation, Fault-Injection & Software Validation Framework with C++17 Core, ITU-T Rule Engine, Dual ML Anomaly Detection, and Gemini AI Root-Cause Analysis.",
+    images: [],
+    metrics: [
+      { value: "99.63%", label: "Group ML Test Accuracy" },
+      { value: "C++17 Core", label: "Microsecond Physics Latency" },
+      { value: "25/25", label: "Verification Tests Passed" },
+      { value: "ITU-T G.692", label: "Standards-Compliant Rules" }
+    ],
+    techSpecs: [
+      { label: "Physics Simulation Core", value: "C++17 / pybind11 / NumPy" },
+      { label: "Frontend & Workbench", value: "Streamlit Cloud / Python 3.12" },
+      { label: "Anomaly Detection", value: "Dual ML: Random Forest & Isolation Forest" },
+      { label: "Generative AI Advisor", value: "Google Gemini API (with deterministic fallback)" },
+      { label: "Standards Compliance", value: "ITU-T G.692 & IEEE 802.3 Hysteresis Engine" },
+      { label: "Testing & Automation", value: "Modern CMake, Pytest (25 Tests) & GitHub Actions CI" }
+    ],
+    architectureTitle: "OptiTest AI System Architecture",
+    architectureNodes: [
+      { title: "Streamlit Engineering UI", desc: "Interactive 5-tab control workbench & telemetry graphs", icon: "monitor" },
+      { title: "C++17 Simulation Core", desc: "Deterministic optical power, OSNR, Q-factor & BER", icon: "cpu" },
+      { title: "Fault Injection Engine", desc: "Fiber cut (LOS), macro-bends, laser aging & noise", icon: "shuffle" },
+      { title: "Rule Engine & Debounce", desc: "ITU-T G.692 hysteresis alarm state machine", icon: "shield-check" },
+      { title: "Dual ML Detector", desc: "Supervised RF (99.63%) & Isolation Forest anomaly scoring", icon: "bar-chart-2" },
+      { title: "Gemini AI Advisor", desc: "Autonomous root-cause analysis & field action plans", icon: "terminal" }
+    ],
+    narratives: [
+      {
+        heading: "The Challenge of Optical Network Validation",
+        paragraphs: [
+          "Optical transport equipment and reconfigurable optical add-drop multiplexers (ROADMs) must operate reliably under continuous physical stress and gracefully handle line degradations like fiber macro-bends, connector ferrule contamination, laser diode aging, and fiber cuts.",
+          "Validating optical management software directly on physical line cards is prohibitively expensive, hardware-constrained, and hazardous to physical transceivers. OptiTest AI addresses this by providing an end-to-end software simulation and test framework that deterministically emulates optical physical layer dynamics, injects hardware perturbations, and automates software validation against international telecommunications standards."
+        ]
+      },
+      {
+        heading: "High-Performance C++17 Core & pybind11 Native Interop",
+        paragraphs: [
+          "The optical link simulation core is engineered in C++17 to ensure deterministic, microsecond execution latency without Python garbage collection pauses, enabling real-time emulation of extensive multi-span optical paths. Contiguous memory layout for telemetry structures maximizes CPU L1/L2 cache prefetching.",
+          "Using pybind11, the C++ core releases Python's Global Interpreter Lock (GIL) during bulk Monte Carlo sweeps, while seamlessly exposing power budget calculations (P_rx = P_tx - alpha*L - L_other), Optical Signal-to-Noise Ratio (OSNR), Gaussian Q-Factor, and continuous Bit Error Rate (std::erfc down to 10^-15). A pure Python fallback guarantees zero-dependency execution across varied environments."
+        ],
+        bullets: [
+          "Microsecond execution speed with contiguous memory telemetry buffers.",
+          "Analytical BER derivation from Gaussian Q-factor via std::erfc without lookup tables.",
+          "Complete pybind11 GIL release for parallelized multi-span simulation sweeps.",
+          "Resilient Python fallback ensuring transparent execution on Streamlit Community Cloud."
+        ]
+      },
+      {
+        heading: "Modular Fault-Injection & ITU-T Debounce State Machine",
+        paragraphs: [
+          "OptiTest AI incorporates a decoupled fault injection engine capable of modeling Fiber Cut (LOS), Progressive Macro-Bending, Connector Contamination, Laser Diode Aging / Bias Drift, and ASE Optical Amplifier Noise Ripple across reversible degradation cycles.",
+          "To prevent alarm flapping caused by polarization fluctuations and vibrational micro-bends, the validation engine implements an ITU-T G.692 compliant state machine requiring N=3 consecutive sample persistence before transitioning states (HEALTHY -> DEGRADED -> LINK_DOWN), alongside a +1.0 dB hysteresis recovery band."
+        ]
+      },
+      {
+        heading: "Dual Machine Learning & Gemini-Powered RCA",
+        paragraphs: [
+          "Real-time telemetry streams are evaluated through a dual ML pipeline: an unsupervised Isolation Forest for zero-day anomaly scoring (with calibrated sigmoid decision mapping), and a supervised Random Forest classifier achieving 99.63% test accuracy on unseen group-split runs across diverse fiber spans and transmitter powers.",
+          "When anomalies or faults trip, an integrated AI Diagnostic Advisor powered by the Google Gemini API generates grounded engineering root-cause analysis (RCA), assessing failure modes, localized span coordinates, and prioritized field maintenance steps with zero hallucinations."
+        ],
+        bullets: [
+          "Group-split verified Random Forest failure classifier achieving 99.63% test accuracy.",
+          "Isolation Forest calibrated sigmoid scoring yielding zero-day anomaly alerts.",
+          "Automated ITU-T G.692 and IEEE 802.3 optical threshold enforcement.",
+          "Grounded Gemini API root-cause reports with field technician action items."
+        ]
+      }
+    ]
   }
 };

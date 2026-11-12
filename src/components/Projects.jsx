@@ -76,12 +76,34 @@ export const Projects = ({ projects, onSelectProject }) => {
                 <p className="text-text-secondary text-sm leading-relaxed mt-2">{project.description}</p>
               </div>
 
-              <div className="flex flex-wrap gap-1.5 mt-auto pt-4">
-                {project.tags.map((tag, tIdx) => (
-                  <span key={tIdx} className="font-mono text-[10px] text-text-muted bg-bg-tertiary px-2 py-0.5 rounded">
-                    {tag}
-                  </span>
-                ))}
+              <div className="mt-auto pt-4 space-y-3">
+                <div className="flex flex-wrap gap-1.5">
+                  {project.tags.map((tag, tIdx) => (
+                    <span key={tIdx} className="font-mono text-[10px] text-text-muted bg-bg-tertiary px-2 py-0.5 rounded">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                {project.link && !project.link.includes('github.com') && (
+                  <div className="pt-2 border-t border-border-color flex items-center justify-between">
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:text-primary-hover hover:underline"
+                    >
+                      <span>Live Demo</span>
+                      <ArrowUpRight size={13} />
+                    </a>
+                    {alias && (
+                      <span className="text-xs text-text-muted hover:text-text-primary transition-colors">
+                        Case Study &rarr;
+                      </span>
+                    )}
+                  </div>
+                )}
               </div>
             </div>
           );

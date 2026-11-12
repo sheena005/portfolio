@@ -90,10 +90,15 @@ export const ProjectDetail = ({ project, details, onBack }) => {
           <ArrowLeft size={18} /> Back to Projects
         </div>
 
-        <div className="flex gap-3">
+        <div className="flex flex-wrap gap-3">
+          {project.github && (
+            <a href={project.github} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full font-semibold text-xs cursor-pointer transition-all border border-border-color bg-bg-secondary text-text-primary hover:border-primary hover:text-primary hover:-translate-y-0.5 shadow-sm">
+              <GitBranch size={14} /> Source Code
+            </a>
+          )}
           {project.link && project.link !== '#' && (
             <a href={project.link} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full font-semibold text-xs cursor-pointer transition-all border-none outline-none bg-primary text-bg-secondary hover:bg-primary-hover hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/30">
-              View Live <ExternalLink size={14} />
+              {project.link.includes('github.com') ? 'View Repository' : 'Live Demo'} <ExternalLink size={14} />
             </a>
           )}
         </div>
